@@ -1,0 +1,12 @@
+#summary This Page Contains the Screenshots of Face Manager and Face Authentication Module
+#labels gui,facemanager,faceauthenitcationscreen
+
+= SCREEN SHOTS =
+
+== PREVIEW OF FACE MANAGER ==
+
+http://pam-face-authentication.googlecode.com/svn/wiki/images/facemanager.png
+
+== PREVIEW OF FACE AUTHENITCATION SCREEN ==
+
+http://pam-face-authentication.googlecode.com/svn/wiki/images/faceauthenticate.png
