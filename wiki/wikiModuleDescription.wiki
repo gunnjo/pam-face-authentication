@@ -8,3 +8,22 @@
   # cmd-facetracker
   # gtk-facetracker
   # gtk-facemaanager
+
+=== libfacedetect ===
+This module contains functions related to detecting faces , input to the function is an image and output are the cordinates.
+
+=== libfaceconfigure ===
+This module contains functions related to saving statistical information of the face.
+
+=== pam_face_authentication ===
+the main pluggable authentication module
+
+=== cmd-facetracker ===
+if X server is not up, then pam will run this module
+
+=== gtk-facetracker ===
+if X server is up, the gtk version is launched
+
+=== gtk-facemanager ===
+the gtk version which shows an interface to add and delete users.
+
