@@ -11,7 +11,7 @@ http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot-1.png
 
 http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot-2.png
 
-== PREVIEW OF FACE AUTHENITCATION SCREEN ==
+== PREVIEW OF FACE AUTHENTICATION SCREEN ==
 
 
 http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot-3.png
