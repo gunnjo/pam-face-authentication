@@ -18,6 +18,7 @@ Nose Cascade   same as above
 
 === libfacedetect ===
 Contains *Functions*
+
 *faceDetect*
   Detects Face and Facial Features (Eyes and Nose)
 *Preprocess*
