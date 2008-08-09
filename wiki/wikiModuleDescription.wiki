@@ -10,7 +10,9 @@
 
 == Haar Cascades ==
 Face Cascade [ the one from OpenCV Package ]
+
 Eye Cascade   provided by Modesto Castrillón Santana ( THANKS! :) ) 
+
 Nose Cascade   same as above
 
 
