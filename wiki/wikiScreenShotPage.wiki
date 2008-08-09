@@ -5,8 +5,13 @@
 
 == PREVIEW OF FACE MANAGER ==
 
-http://pam-face-authentication.googlecode.com/svn/wiki/images/facemanager.png
+http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot.png
+
+http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot-1.png
+
+http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot-2.png
 
 == PREVIEW OF FACE AUTHENITCATION SCREEN ==
 
-http://pam-face-authentication.googlecode.com/svn/wiki/images/faceauthenticate.png
+
+http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot-3.png
