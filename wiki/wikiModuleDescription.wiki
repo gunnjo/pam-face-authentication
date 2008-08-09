@@ -5,25 +5,31 @@
   # libfacedetect
   # libfaceconfigure
   # pam_face_authentication
-  # cmd-facetracker
   # gtk-facetracker
-  # gtk-facemaanager
+  # gtk-facemanager
+
+== Haar Cascades ==
+Face Cascade [ the one from OpenCV Package ]
+Eye Cascade   provided by Modesto Castrillón Santana ( THANKS! :) ) 
+Nose Cascade   same as above
+
 
 === libfacedetect ===
-This module contains functions related to detecting faces , input to the function is an image and output are the cordinates.
+Contains *Functions*
+*faceDetect*
+  Detects Face and Facial Features (Eyes and Nose)
+*Preprocess*
+  Homomorphic Filtering , Wavelet Based Illumination Normalisation , Geometric Roll Normalization
 
 === libfaceconfigure ===
-This module contains functions related to saving statistical information of the face.
+Contains *Training Functions* later on used for recognition
 
 === pam_face_authentication ===
-the main pluggable authentication module
-
-=== cmd-facetracker ===
-if X server is not up, then pam will run this module
+The main *Pluggable Authentication Module*
 
 === gtk-facetracker ===
-if X server is up, the gtk version is launched
+*GUI* for Login Screen
 
 === gtk-facemanager ===
-the gtk version which shows an interface to add and delete users.
-
+*GUI* Face Training Module
+equivalent to *passwd utility*
