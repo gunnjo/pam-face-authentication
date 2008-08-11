@@ -28,7 +28,9 @@ Add Line at the top
 ||`auth    sufficient     pam_face_authenticate.so` ||
 
 || `su UserName` ||
+
 if everything is all right , you should be able to see the following screen
+
 http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot-3.png
 
 ----------------------------------------------------------------------------------
@@ -39,6 +41,4 @@ Add Line at the top
 `auth    sufficient     pam_face_authenticate.so`
 
 
-CAUTION : Never should 'required' be written instead of sufficient
-
-
+|| CAUTION : Never should 'required' be written instead of sufficient ||
