@@ -19,6 +19,9 @@ Configure UserName
 ||`gtk-facemanager`||
 
 http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot.png
+
+http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot-2.png
+
 http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot-1.png
 
 Testing if it works
