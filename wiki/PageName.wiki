@@ -1,0 +1,47 @@
+#summary Installation Guide
+#labels installation,guide,user
+
+= Introduction =
+==Required Components==
+OpenCV 1.00
+Get it from http://sourceforge.net/projects/opencvlibrary/
+http://opencvlibrary.sourceforge.net/InstallGuide_Linux
+
+GSL 1.9
+Get it from http://www.gnu.org/software/gsl/
+
+
+Following Commands should be executed as root
+
+`*make*`
+
+`*make install*`
+
+Configure UserName
+`gtk-facemanager`
+http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot.png
+http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot-1.png
+
+Testing if it works
+`vi /etc/pam.d/su`
+
+Add Line at the top
+`auth    sufficient     pam_face_authenticate.so`
+
+`su UserName`
+if everything is all right , you should be able to see the following screen
+http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot-3.png
+
+----------------------------------------------------------------------------------
+Adding PAM module for gdm
+`vi /etc/pam.d/gdm`
+
+Add Line at the top
+`auth    sufficient     pam_face_authenticate.so`
+
+
+CAUTION : Never should 'required' be written instead of sufficient
+
+
+
+
