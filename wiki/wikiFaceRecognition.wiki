@@ -18,9 +18,9 @@ an Implementation was done in OpenCV ( See Seeing with OpenCV ,Servo Magazine 5 
 ===Local Binary Pattern (LBP) : Applications to Face Recognition==
 
 Face Description with Local Binary Patterns:
-Application to Face Recognition
-Timo Ahonen, Student Member, IEEE, Abdenour Hadid,
-and Matti Pietik¨ainen, Senior Member, IEEE
+Application to Face Recogition
+||Timo Ahonen, Student Member, IEEE, Abdenour Hadid,
+and Matti Pietik¨ainen, Senior Member, IEEE||
 (Download From http://www.ee.oulu.fi/mvg/files/pdf/pdf_730.pdf)
 
 LBP is used for texture analysis , an application of a LBP(8,1) operator on the image(1) leads to image(2)
@@ -28,7 +28,7 @@ LBP is used for texture analysis , an application of a LBP(8,1) operator on the 
 || Image (1) || Image (2) ||
 || Image to be Uploaded || Image to be Uploaded ||
 
-LBP Operator Also is Invariant to Different Illumination Conditions
+*LBP Operator* Also is Invariant to Different Illumination Conditions
 
 LBP(image(1)) and LBP(image(2))  is Divident in m*n regions
 
@@ -36,9 +36,8 @@ A Historgram is generated for each regions on LBP(image1) and LBP(image2)
 and ChiSquare Distance  (H(LBP(image(1)))-H(LBP(image(2))))^2/(H(LBP(image(1)))+H(LBP(image(2))) is computed
 
 and also a Eucledian Distance between Pixels of each LBP operated Images are also Computed
-if both fall under a Emperical Threshold , the Face is authenticated
 
-
+*if both fall under a Emperical Threshold , the Face is authenticated*
 
 
 
