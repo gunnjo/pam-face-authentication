@@ -5,23 +5,30 @@
 When a face has to be authenticated , the Two Input Images which are compared have to be in the same scale , the pose should also be the same. to achieve this the following are done
 
 * Roll Normalisation of the face by Detecting the Eye *
+
 Detecting Eye Cordinates using Centre of Mass(COM)
+
 Rotating Image and Scaling to appropriate predifined size
 
 * Homomorphic Filtering *
 Equations
 
-Image=Reflectance*Illumin
+Image=Reflectance*ILLu
+
 Log(Im)=Log(r) + log(ill)
+
 z=INVERSE_DFT(DFT(Log(Im)*HighPassFilter(butterworth))
+
 Image=EXP(z)
 
 
 * Wavelet Based Illumination Control *
 Funda:
+
 z=DWT(Image)
+
 use HE on(LL)
+
 Scale by factor >1 in HL HH AND LH
+
 Image=InverseDWT(z)
-
-
