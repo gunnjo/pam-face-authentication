@@ -17,7 +17,7 @@ Image=Reflectance*ILLu
 
 Log(Im)=Log(r) + log(ill)
 
-z=INVERSE_DFT(DFT(Log(Im)*HighPassFilter(butterworth))
+z=INVERSE_DFT(DFT(Log(Im) X HighPassFilter(butterworth) )
 
 Image=EXP(z)
 
