@@ -31,11 +31,12 @@ LBP is used for texture analysis , an application of a LBP(8,1) operator on the 
 LBP Operator Also is Invariant to Different Illumination Conditions
 
 LBP(image(1)) and LBP(image(2))  is Divident in m*n regions
-A Historgram is generated for each regions on LBP(image1) and LBP(image2)  and ChiSquare Distance  (H(LBP(image(1)))-H(LBP(image(2))))^2/(H(LBP(image(1)))+H(LBP(image(2))) is computed
+
+A Historgram is generated for each regions on LBP(image1) and LBP(image2)  
+and ChiSquare Distance  (H(LBP(image(1)))-H(LBP(image(2))))^2/(H(LBP(image(1)))+H(LBP(image(2))) is computed
+
 and also a Eucledian Distance between Pixels of each LBP operated Images are also Computed
 if both fall under a Emperical Threshold , the Face is authenticated
-
-
 
 
 
