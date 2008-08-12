@@ -9,7 +9,7 @@ Based on
 M. Turk and A. Pentland, "Face recognition using eigenfaces," Proc. IEEE Conference on Computer Vision and Pattern Recognition, Maui, Hawaii, 1991.
 an Implementation was done in OpenCV ( See Seeing with OpenCV ,Servo Magazine 5 part series )
  Eigenface was performing Poorly with Nearest Neighbour Classifier
-= Problems Face =
+=== Problems Faced ===
   * Threshold Value was difficult to obtain
   * Small Training Set
   
@@ -38,6 +38,4 @@ and ChiSquare Distance  (H(LBP(image(1)))-H(LBP(image(2))))^2/(H(LBP(image(1)))+
 and also a Eucledian Distance between Pixels of each LBP operated Images are also Computed
 
 *if both fall under a Emperical Threshold , the Face is authenticated*
-
-
 
