@@ -1,0 +1,25 @@
+#summary This page Explains How to Add and Configure for a user
+
+=== Introduction ===
+
+To add a user , run gtk-facemanager
+
+* STEP 1) it will display *
+
+http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot.png
+
+
+* STEP 2) Click on Add User *
+
+
+http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot-2.png
+
+
+* STEP 3) Click on Sample Face *
+
+
+http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot-1.png
+
+* STEP 4) Click on Save and Close *
+
+
