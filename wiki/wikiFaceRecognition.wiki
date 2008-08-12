@@ -26,7 +26,7 @@ and Matti Pietik¨ainen, Senior Member, IEEE||
 LBP is used for texture analysis , an application of a LBP(8,1) operator on the image(1) leads to image(2)
 
 || Image (1) || Image (2) ||
-|| http://pam-face-authentication.googlecode.com/svn/wiki/images/1/adducantdance2.png |||| http://pam-face-authentication.googlecode.com/svn/wiki/images/1/adducantdance1.png ||
+|| http://pam-face-authentication.googlecode.com/svn/wiki/images/1/adducantdance.png |||| http://pam-face-authentication.googlecode.com/svn/wiki/images/1/adducantdance1.png ||
 
 
 *LBP Operator* Also is Invariant to Different Illumination Conditions
