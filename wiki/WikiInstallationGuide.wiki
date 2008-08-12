@@ -3,6 +3,9 @@
 
 = Introduction =
 ==Required Components==
+
+*libpam-devel* (>= 0.99.8)
+
 OpenCV 1.00
 Get it from http://sourceforge.net/projects/opencvlibrary/
 
@@ -10,7 +13,7 @@ Installation Instructions
 
 http://opencvlibrary.sourceforge.net/InstallGuide_Linux
 
-After Installation
+After Installation of OpenCV
 
 ||PKG_CONFIG_PATH=/where/you/have/installed/opencv/lib/pkgconfig:${PKG_CONFIG_PATH} ||
 ||export PKG_CONFIG_PATH||
@@ -18,6 +21,8 @@ After Installation
 
 GSL 1.9
 Get it from http://www.gnu.org/software/gsl/
+
+Once you have the components needed
 
 ===Extract pam-face-authentication Package===
 Following Commands should be executed as root
