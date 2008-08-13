@@ -37,7 +37,7 @@ Following Commands should be executed as root
 ./configure
 make
 }}}
-===run as super user
+*run as super user*
 {{{
 make install
 }}}
