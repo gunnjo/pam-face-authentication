@@ -26,9 +26,9 @@ Once you have the components needed
 
 ===Extract pam-face-authentication Package===
 Following Commands should be executed as root
-|| `*./configure*` ||
-|| `*make*` ||
-|| `*make install*` ||
+|| `./configure` ||
+|| `make` ||
+|| `make install` ||
 
 Configure UserName
 ||`gtk-facemanager`||
