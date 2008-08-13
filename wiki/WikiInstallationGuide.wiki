@@ -9,9 +9,14 @@
 *OpenCV 1.00*
 Get it from http://sourceforge.net/projects/opencvlibrary/
 
+
 Installation Instructions
 
 http://opencvlibrary.sourceforge.net/InstallGuide_Linux
+
+you will need FFmpeg
+
+http://www.comp.leeds.ac.uk/vision/opencv/install-lin-ffmpeg.html
 
 After Installation of OpenCV
 
@@ -25,13 +30,28 @@ Get it from http://www.gnu.org/software/gsl/
 Once you have the components needed
 
 ===Extract pam-face-authentication Package===
-Following Commands should be executed as root
-|| `./configure` ||
-|| `make` ||
-|| `make install` ||
 
-Configure UserName
-||`gtk-facemanager`||
+
+Following Commands should be executed as root
+{{{
+`./configure`
+`make` ||
+}}}
+===run as super user
+{{{
+`make install`
+}}}
+
+==How to Configure Face with a Username?==
+{{{
+`gtk-facemanager`
+}}}
+
+if you get this error
+
+"error while loading shared libraries: libcxcore.so.1: cannot open shared object file: No such file or directory"
+
+it means FFmpeg was not installed with OpenCV 
 
 http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot.png
 
@@ -40,12 +60,12 @@ http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot-2.png
 http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot-1.png
 
 ===Testing if it works===
-||`vi /etc/pam.d/su`||
+{{{`vi /etc/pam.d/su` }}}
 
 *Add Line at the top*
-||`auth    sufficient     pam_face_authenticate.so` ||
+{{{`auth    sufficient     pam_face_authenticate.so` }}}
 
-|| `su UserName` ||
+{{{ `su UserName` }}}
 
 if everything is all right , you should be able to see the following screen
 
@@ -53,10 +73,10 @@ http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot-3.png
 
 ----------------------------------------------------------------------------------
 ===Adding PAM module for gdm===
-`vi /etc/pam.d/gdm`
+{{{ `vi /etc/pam.d/gdm` }}}
 
 *Add Line at the top*
-`auth    sufficient     pam_face_authenticate.so`
+{{{ `auth    sufficient     pam_face_authenticate.so` }}}
 
 
 || CAUTION : Never should 'required' be written instead of sufficient ||
