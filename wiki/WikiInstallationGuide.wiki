@@ -34,24 +34,29 @@ Once you have the components needed
 
 Following Commands should be executed as root
 {{{
-`./configure`
-`make` ||
+./configure
+make
 }}}
 ===run as super user
 {{{
-`make install`
+make install
 }}}
 
 ==How to Configure Face with a Username?==
 {{{
-`gtk-facemanager`
+gtk-facemanager
 }}}
 
-if you get this error
-
-"error while loading shared libraries: libcxcore.so.1: cannot open shared object file: No such file or directory"
+if you get this error : *
+"error while loading shared libraries: libcxcore.so.1: cannot open shared object file: No such file or directory" *
 
 it means FFmpeg was not installed with OpenCV 
+download it from svn
+{{{
+svn checkout svn://svn.mplayerhq.hu/ffmpeg/trunk ffmpeg
+}}}
+
+
 
 http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot.png
 
@@ -60,12 +65,12 @@ http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot-2.png
 http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot-1.png
 
 ===Testing if it works===
-{{{`vi /etc/pam.d/su` }}}
+{{{ vi /etc/pam.d/su }}}
 
 *Add Line at the top*
 {{{`auth    sufficient     pam_face_authenticate.so` }}}
 
-{{{ `su UserName` }}}
+{{{ su UserName }}}
 
 if everything is all right , you should be able to see the following screen
 
@@ -73,10 +78,10 @@ http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot-3.png
 
 ----------------------------------------------------------------------------------
 ===Adding PAM module for gdm===
-{{{ `vi /etc/pam.d/gdm` }}}
+{{{ vi /etc/pam.d/gdm }}}
 
 *Add Line at the top*
-{{{ `auth    sufficient     pam_face_authenticate.so` }}}
+{{{ auth    sufficient     pam_face_authenticate.so }}}
 
 
 || CAUTION : Never should 'required' be written instead of sufficient ||
