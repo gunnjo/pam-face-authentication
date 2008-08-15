@@ -16,7 +16,6 @@ http://opencvlibrary.sourceforge.net/InstallGuide_Linux
 
 you will need FFmpeg
 
-http://www.comp.leeds.ac.uk/vision/opencv/install-lin-ffmpeg.htm
 if OpenCV Configure does not detect FFmpeg
 Checkout this site : http://freeshells.ch/~phoenix/ocv.htm
 
