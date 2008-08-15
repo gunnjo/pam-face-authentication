@@ -14,10 +14,6 @@ Installation Instructions
 
 http://opencvlibrary.sourceforge.net/InstallGuide_Linux
 
-you will need FFmpeg
-
-if OpenCV Configure does not detect FFmpeg
-Checkout this site : http://freeshells.ch/~phoenix/ocv.htm
 
 After Installation of OpenCV
 
@@ -50,13 +46,14 @@ gtk-facemanager
 
 if you get this error : *
 "error while loading shared libraries: libcxcore.so.1: cannot open shared object file: No such file or directory" *
+{{{ 
+ln -s /opencvinstallpath/opencv-1.0.0/lib/* /usr/lin
 
-it means FFmpeg was not installed with OpenCV 
-download it from svn
-{{{
-svn checkout svn://svn.mplayerhq.hu/ffmpeg/trunk ffmpeg
 }}}
 
+
+==Screenshots==
+---------------------------------------------
 
 
 http://pam-face-authentication.googlecode.com/svn/wiki/images/Screenshot.png
