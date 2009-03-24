@@ -1,5 +1,5 @@
 #summary Details of Face Recognition Work done during the Project
-#labels face,recognition,eigenface,LBP
+#labels face,recognition,SVM,RBF,LBP,DCTMOD2
 =UPDATE 22 March 2009==
 The Recognition Algorithm has been Completley Changed
 it now uses DCTMOD2 Features and LBP Features and trains it over a (non linear) SVM Classifier using a RBF Kernel , 
