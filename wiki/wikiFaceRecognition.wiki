@@ -12,8 +12,11 @@ LBP is the Local Binary Pattern Feature
 
 
 ----
+
+
 ~~ == Introduction == ~~
 
+~~
 ===EigenFace Algorithm==
 *Initial Proposal* was to implement a eigenface algorithm for face recognition
 Based on
@@ -48,5 +51,4 @@ A Historgram is generated for each regions on LBP(image1) and LBP(image2)
 and ChiSquare Distance  (H(LBP(image(1)))-H(LBP(image(2))))^2/(H(LBP(image(1)))+H(LBP(image(2))) is computed
 
 and also a Eucledian Distance between Pixels of each LBP operated Images are also Computed
-
-*if both fall under a Emperical Threshold , the Face is authenticated*
+ *if both fall under a Emperical Threshold , the Face is authenticated* ~~
