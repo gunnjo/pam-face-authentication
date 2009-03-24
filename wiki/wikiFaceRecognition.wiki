@@ -10,6 +10,9 @@ i have added a wiki entry at http://opencv.willowgarage.com/wiki/DctMod2
 
 LBP is the Local Binary Pattern Feature
 
+[ More Text And results to be added Soon]
+
+A Weighted Chisquare Distance is used to Reject Imposter faces (which is not even trained on the database )
 
 ----
 
