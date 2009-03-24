@@ -1,7 +1,18 @@
 #summary Details of Face Recognition Work done during the Project
 #labels face,recognition,eigenface,LBP
+=UPDATE 22 March 2009==
+The Recognition Algorithm has been Completley Changed
+it now uses DCTMOD2 Features and LBP Features and trains it over a (non linear) SVM Classifier using a RBF Kernel , 
+Optimum Constants C and gamma for the svm was detected and used for training
 
-== Introduction ==
+DCTMod2 Features
+i have added a wiki entry at http://opencv.willowgarage.com/wiki/DctMod2
+
+LBP is the Local Binary Pattern Feature
+
+
+----
+~~ == Introduction == ~~
 
 ===EigenFace Algorithm==
 *Initial Proposal* was to implement a eigenface algorithm for face recognition
