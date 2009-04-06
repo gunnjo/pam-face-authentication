@@ -1,0 +1,3 @@
+#summary Report Issues with other distros here
+
+==Add the issues /errors with other distros here==
