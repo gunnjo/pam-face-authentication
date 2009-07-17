@@ -1,6 +1,9 @@
 #summary Installation Guide
 #labels installation,guide,pam
 
+Tutorial in Portugeese 
+http://vivaolinux.com.br/artigo/Biometria-facial-na-autenticacao-do-usuario-root/
+
 = Introduction =
 ==Required Components==
 
