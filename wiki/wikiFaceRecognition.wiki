@@ -1,5 +1,22 @@
 #summary Details of Face Recognition Work done during the Project
 #labels face,recognition,SVM,RBF,LBP,DCTMOD2
+
+=UPDATE 08 August 2009==
+
+http://lifeasiknow-it.blogspot.com/2009/07/pam-face-authentication-musings-face.html
+
+
+
+
+
+
+
+
+OLD STUFF BELOW
+
+
+
+
 =UPDATE 22 March 2009==
 The Recognition Algorithm has been Completley Changed
 it now uses DCTMOD2 Features and LBP Features and trains it over a (non linear) SVM Classifier using a RBF Kernel , 
