@@ -1,5 +1,4 @@
 
-
 ===CALL FOR PARTICIPATION (send mail to anyone of us) ===
 
 
@@ -22,15 +21,6 @@ Fusion of
 ~~ TODO: FIX Segfault in facedetection module ~~ DONE!
 
 
-|| [http://code.google.com/soc/ http://google-summer-of-code.googlecode.com/files/soc08-300x200_white.jpg] || [http://en.opensuse.org http://en.opensuse.org/skins/opensuse/images/common/geeko.jpg] ||[http://www.bits-goa.ac.in/ http://pam-face-authentication.googlecode.com/svn/trunk/bits.png] ||
-
-Project being developed as part of *Google Summer of Code 2008* for *openSUSE* by Rohan Anil Mentored By *Alex Lau*,Novell,China
-
----
-* This project will be continued till eternity *
----
-This is Pluggable Authentication Module for Face based Authentication
- 
 ===Compile New Code from SVN : Requirements===
 # All code in this package requires the *OpenCV library* (known working 
 version is *1.0.0* ):
@@ -93,5 +83,3 @@ this project has been accepted to be continued by Me(Rohan) under Organization P
   
 == Update 8th August 2009 ==
 Version 0.3 Released 
-
-
