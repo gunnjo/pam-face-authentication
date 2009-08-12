@@ -1,6 +1,14 @@
 #summary Installation Guide
 #labels installation,guide,pam
 
+= Introduction =
+
+= V 0.3 =
+
+http://lifeasiknow-it.blogspot.com/2009/08/pam-face-authentication-musings-how-to.html
+
+
+= V 0.2 =
 Tutorial in Portuguese 
 http://vivaolinux.com.br/artigo/Biometria-facial-na-autenticacao-do-usuario-root/
 
