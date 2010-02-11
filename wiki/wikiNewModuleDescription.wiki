@@ -1,0 +1,10 @@
+#labels gsoc2009,module,description
+This is the current architecture of the project
+
+Look at the following links
+
+[http://lifeasiknow-it.blogspot.com/2009/08/pam-face-authentication-musings-ui-and.html]
+
+[http://lifeasiknow-it.blogspot.com/2009/07/pam-face-authentication-musings-face.html]
+
+
