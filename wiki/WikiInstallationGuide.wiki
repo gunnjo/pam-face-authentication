@@ -3,6 +3,11 @@
 
 = Introduction =
 
+Please have a look at: http://pam-face-authentication.org/wiki/
+where we provide detailed installation guides.
+
+The following tutorials can be seen as deprecated...
+
 = V 0.3 =
 
 http://lifeasiknow-it.blogspot.com/2009/08/pam-face-authentication-musings-how-to.html
