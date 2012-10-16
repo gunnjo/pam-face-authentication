@@ -1,0 +1,9 @@
+#summary Install from source
+
+= Installation =
+
+First you have to make sure that all dependencies are installed for PFA. Assuming you are using Ubuntu you would issue this command in a terminal. For other distributions the command differs of course. Nevertheless it should be obvious that "Development Tools" (gcc, make, cmake, ...) are needed as well as [http://opencv.willowgarage.com/wiki/Welcome OpenCV]. 
+
+{{{
+sudo apt-get install build-essential cmake qt4-qmake libqt4-dev libx11-dev libcv-dev libcvaux-dev libhighgui-dev libpam0g-dev checkinstall 
+}}}
