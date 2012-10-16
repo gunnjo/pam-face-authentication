@@ -6,6 +6,7 @@
 The following installation guide might differ slightly for your version of (K)Ubuntu. Apart from that it could occur that new versions of OpenCV bring in some incompatibilities (you are warned ;))
 
 Note For *Ubuntu 12.04*: There were changes in OpenCV which require some adjustments to be made. So for Ubuntu 12.04 please see: http://mundodacana.blogspot.com.br/2012/10/autenticacao-facial-no-ubuntu-12.html
+
 In nearer future, the commands mentioned there will be incorporated here too.
 
 = Installation =
