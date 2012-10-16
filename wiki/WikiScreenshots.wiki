@@ -19,6 +19,10 @@ http://2.bp.blogspot.com/_iIph3AEZQlg/SnoojeuwnCI/AAAAAAAAAJE/u5FlPlcjJC0/s400/s
 
 || <wiki:video url="http://www.youtube.com/watch?v=PhReQgyprLg"/> ||
 
+Face Authentication with GDM on openSUSE 11.2 (Contributed by Alessandro Faria)
+
+|| <wiki:video url="http://www.youtube.com/watch?v=tA7jp5u4V68"/> ||
+
 Video demonstrating how to install, configure and use
 
 || <wiki:video url="http://www.youtube.com/watch?v=XOZ8ifKjCIw"/> ||
