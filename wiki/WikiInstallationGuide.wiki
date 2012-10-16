@@ -7,7 +7,7 @@ The following installation guide might differ slightly for your version of (K)Ub
 
 = Installation =
 
-First open a terminal, then proceed with the following commands: 
+First open a [https://help.ubuntu.com/community/UsingTheTerminal terminal], then proceed with the following commands: 
 {{{
 sudo add-apt-repository ppa:antonio.chiurazzi
 sudo apt-get update
