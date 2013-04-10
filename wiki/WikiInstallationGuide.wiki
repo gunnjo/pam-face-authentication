@@ -17,6 +17,7 @@ sudo add-apt-repository ppa:antonio.chiurazzi
 sudo apt-get update
 sudo apt-get install pam-face-authentication
 }}}
+Note: The above adds a non-official repository to your list of valid sources. This is not an offical build.
 
 The commands above add the Ubuntu repository for pam-face-authentication to your package source list and then the plugin is actually installed.
 
@@ -39,6 +40,11 @@ With the next command you can *enable* or *disable* the plugin:
 {{{
 sudo pam-auth-update --package face_authentication 
 }}}
+Note: the above adds pam-face-authentication to your common-auth (/etc/pam.d/common-auth) if used. You may experience problems with this configuration. I suggest you commont out the line that reads simular to the following:
+{{{
+#auth	[success=2 default=ignore] pam_face_authentication.so enableX 
+}}}
+This is an incomplete fix, but may help if you have issues with su or sudo.
 
 = Uninstallation =
 
