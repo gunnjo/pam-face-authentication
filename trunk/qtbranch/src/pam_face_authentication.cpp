@@ -108,14 +108,14 @@ bool ipcStart()
     shmid = shmget(ipckey, IMAGE_SIZE, IPC_CREAT | 0666);
     shared = (char *)shmat(shmid, NULL, 0);
 	if ( !shared) {
-		syslog( LOG_AUTH|LOG_CRIT, "No attach of shm %lx - %m", ipckey);
+		syslog( LOG_CRIT, "No attach of shm %lx - %m", ipckey);
 	}
 
     ipckeyCommAuth = IPC_KEY_STATUS;
     shmidCommAuth = shmget(ipckeyCommAuth, sizeof(int), IPC_CREAT | 0666);
     commAuth = (int *)shmat(shmidCommAuth, NULL, 0);
 	if ( !commAuth) {
-		syslog( LOG_AUTH|LOG_CRIT, "No attach of shm %lx - %m", ipckeyCommAuth);
+		syslog( LOG_CRIT, "No attach of shm %lx - %m", ipckeyCommAuth);
 	}
 
     *commAuth = 0;
@@ -252,7 +252,7 @@ int pam_sm_authenticate(pam_handle_t* pamh, int flags, int argc, const char** ar
     setlocale(LC_ALL, "");
     bindtextdomain("pam_face_authentication", PKGDATADIR "/locale");
     textdomain("pam_face_authentication");
-    openlog("pam_face_authentication", LOG_ODELAY, LOG_AUTH);
+    openlog("pam_face_authentication", LOG_PID, LOG_AUTHPRIV);
 
     Display* displayScreen;
     FILE* xlock = NULL;
@@ -286,20 +286,21 @@ int pam_sm_authenticate(pam_handle_t* pamh, int flags, int argc, const char** ar
     retval = pam_get_user(pamh, &user, NULL);
     if(retval != PAM_SUCCESS)
     {
-        D(("pam_get_user returned error: %s", pam_strerror(pamh,retval)));
+        syslog(LOG_ERR, "pam_get_user returned error: %s", pam_strerror(pamh,retval));
         return retval;
     }
     if (user == NULL || *user == '\0')
     {
-        D(("username not known"));
+        syslog(LOG_ERR, "username not known");
         pam_set_item(pamh, PAM_USER, (const void *) DEFAULT_USER);
         send_msg(pamh, (char*)"Username not set.", 1);
         return PAM_AUTHINFO_UNAVAIL;
     }
     
     // removed Xauth stuff Not Needed for KDM or GDM
-    if (!ipcStart())
+    if (!ipcStart()) {
 	    return PAM_AUTHINFO_UNAVAIL;
+	}
     resetFlags();
 
     username = (char *)calloc(strlen(user)+1, sizeof(char));
@@ -317,8 +318,10 @@ int pam_sm_authenticate(pam_handle_t* pamh, int flags, int argc, const char** ar
     }
 
     // Check if the user's homedir is encrypted
-    if(isHomeEncrypted(userStruct->pw_dir))
+    if(isHomeEncrypted(userStruct->pw_dir)) {
+        syslog(LOG_ERR, "user home encrypted");
       return PAM_AUTHINFO_UNAVAIL;
+	}
 
     while(k < argc)
     {
@@ -410,6 +413,7 @@ int pam_sm_authenticate(pam_handle_t* pamh, int flags, int argc, const char** ar
     {
         //Awesome Graphic Could be put to shared memory over here [TODO]
         send_msg(pamh, gettext("Unable to get hold of your webcam. Please check if it is plugged in."), 1);
+        syslog(LOG_CRIT, "Cannot open camera");
         return PAM_AUTHINFO_UNAVAIL;
     }
 
@@ -490,6 +494,7 @@ int pam_sm_authenticate(pam_handle_t* pamh, int flags, int argc, const char** ar
 
 						while(t3 < 1300) t3 = (double)cvGetTickCount() - t2;
 
+					    webcam.stopCamera();
 						return PAM_SUCCESS;
 					}
 					cvReleaseImage(&im);
@@ -508,9 +513,13 @@ int pam_sm_authenticate(pam_handle_t* pamh, int flags, int argc, const char** ar
 		else send_msg(pamh,gettext("Keep proper distance with the camera."));
 
 
+		IplImage *scaledImage = cvCreateImage(cvSize(IMAGE_WIDTH,
+					IMAGE_HEIGHT), 8, 3);
+		cvResize(queryImage, scaledImage, CV_INTER_LINEAR);
+
 		if(enableX == 1) 
 		{
-			processEvent(displayScreen, window, width, height, queryImage, s);
+			processEvent(displayScreen, window, width, height, scaledImage, s);
 			while(XPending(displayScreen))
 			{
 				XEvent event;
@@ -520,14 +529,12 @@ int pam_sm_authenticate(pam_handle_t* pamh, int flags, int argc, const char** ar
 					send_msg(pamh, (char*)"Shutting down now!");
 					XDestroyWindow(displayScreen, window);
 					XCloseDisplay(displayScreen);
+					    webcam.stopCamera();
 					return PAM_AUTHINFO_UNAVAIL;
 				}
 			}
 		}
 
-		IplImage *scaledImage = cvCreateImage(cvSize(IMAGE_WIDTH,
-					IMAGE_HEIGHT), 8, 3);
-		cvResize(queryImage, scaledImage, CV_INTER_LINEAR);
 		writeImageToMemory(scaledImage, shared);
 		cvReleaseImage(&scaledImage);
 	}
@@ -547,7 +554,8 @@ int pam_sm_authenticate(pam_handle_t* pamh, int flags, int argc, const char** ar
     *commAuth = STOPPED;
     webcam.stopCamera();
     
-    return PAM_AUTHINFO_UNAVAIL;
+	syslog(LOG_ERR, "Timeout or failure");
+    return PAM_AUTH_ERR;
 }
 
 //------------------------------------------------------------------------------
@@ -568,7 +576,7 @@ int pam_sm_acct_mgmt(pam_handle_t* pamh, int flags, int argc, const char** argv)
 PAM_EXTERN
 int pam_sm_chauthtok(pam_handle_t* pamh, int flags, int argc, const char** argv)
 {
-    return PAM_SUCCESS;
+    return PAM_IGNORE;
 }
 
 /* --- session management --- */
