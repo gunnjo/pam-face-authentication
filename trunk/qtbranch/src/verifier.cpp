@@ -47,7 +47,14 @@ using std::list;
 verifier::verifier()
 {
     uid_t userID = getuid();
-    userStruct = getpwuid(getuid());
+    verifier(userID);
+	
+}
+
+//------------------------------------------------------------------------------
+verifier::verifier(uid_t userID)
+{
+    userStruct = getpwuid(userID);
     string basePath = string(userStruct->pw_dir); // Current user homedir
     string maceConfig = "";
     
@@ -56,7 +63,7 @@ verifier::verifier()
     modelDirectory = basePath + "/model";
     configDirectory = basePath + "/config";
     maceConfig = configDirectory + "/mace.xml";
-    
+
     // Create the paths
     mkdir(basePath.c_str(), S_IRWXU);
     mkdir(facesDirectory.c_str(), S_IRWXU);
@@ -74,20 +81,6 @@ verifier::verifier()
         setConfig(&newConfig, (char*)configDirectory.c_str());
     }
 
-}
-
-//------------------------------------------------------------------------------
-verifier::verifier(uid_t userID)
-{
-    userStruct = getpwuid(userID);
-    string basePath = string(userStruct->pw_dir); // Current user homedir
-    string maceConfig = "";
-    
-    basePath.append(PFA_PATH); // homedir + /.pam_face_authentication
-    facesDirectory = basePath  + "/faces";
-    modelDirectory = basePath + "/model";
-    configDirectory = basePath + "/config";
-    maceConfig = configDirectory + "/mace.xml";
 }
 
 //------------------------------------------------------------------------------
