@@ -1,7 +1,8 @@
 #ifndef _INCL_FACE_DETECTOR
 #define _INCL_FACE_DETECTOR
 
-#include "cv.h"
+#include "opencv2/highgui/highgui.hpp"
+#include "opencv2/objdetect/objdetect.hpp"
 
 /**
 * Face structure, information that can describe the detected face on the image

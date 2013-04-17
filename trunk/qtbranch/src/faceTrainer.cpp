@@ -28,13 +28,13 @@
 #include <dirent.h>
 #include <unistd.h>
 
+#include "opencv2/core/core.hpp"
+#include "opencv2/highgui/highgui.hpp"
 #include "faceTrainer.h"
 #include "faceTrainerAdvSettings.h"
 #include "aboutBox.h"
 #include "webcamImagePaint.h"
 #include "utils.h"
-#include "cv.h"
-#include "highgui.h"
 #include "qtUtils.h"
 #include "pam_face_defines.h"
 

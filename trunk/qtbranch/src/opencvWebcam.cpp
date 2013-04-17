@@ -17,8 +17,6 @@
 */
 
 #include "opencvWebcam.h"
-#include "cv.h"
-#include "highgui.h"
 #include "opencv2/highgui/highgui.hpp"
 #include "pam_face_defines.h"
 
@@ -36,6 +34,7 @@ opencvWebcam::opencvWebcam(): cameraId(0)
 //------------------------------------------------------------------------------
 opencvWebcam::~opencvWebcam()
 {
+	stopCamera();
 }
 
 //------------------------------------------------------------------------------

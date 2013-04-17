@@ -19,8 +19,7 @@
 */
 
 #include <string>
-#include "cv.h"
-#include "highgui.h"
+#include "opencv2/highgui/highgui.hpp"
 #include "qtUtils.h"
 #include "utils.h"
 #include "webcamImagePaint.h"

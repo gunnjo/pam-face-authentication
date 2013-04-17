@@ -1,7 +1,7 @@
 #ifndef _INCL_GUARD_TRACK
 #define _INCL_GUARD_TRACK
 
-#include "cv.h"
+#include "opencv2/highgui/highgui.hpp"
 
 #define NUMBER_OF_GRID_POINTS 25
 #define GRID_SIDE_SIZE 5

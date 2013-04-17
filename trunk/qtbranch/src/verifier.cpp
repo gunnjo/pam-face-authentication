@@ -28,7 +28,9 @@
 #include <sys/time.h>
 #include <sys/types.h>
 #include <unistd.h>
-#include "cv.h"
+#include "opencv2/highgui/highgui.hpp"
+#include <opencv2/imgproc/types_c.h>
+#include <opencv2/imgproc/imgproc_c.h>
 #include "pam_face_defines.h"
 #include "utils.h"
 #include "verifier.h"

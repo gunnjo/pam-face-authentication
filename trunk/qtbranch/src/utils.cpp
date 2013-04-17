@@ -21,11 +21,12 @@
 #include <math.h>
 #include <float.h>
 #include <limits.h>
-#include "cv.h"
-#include "highgui.h"
+#include "opencv2/highgui/highgui.hpp"
+#include <opencv2/imgproc/types_c.h>
+#include <opencv2/imgproc/imgproc_c.h>
+#include <opencv2/legacy/compat.hpp>
 
 #include "pam_face_defines.h"
-#include <cxcore.h>
 #include <stdio.h>
 
 #include "utils.h"

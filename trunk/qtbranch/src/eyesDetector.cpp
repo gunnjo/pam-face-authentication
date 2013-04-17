@@ -20,10 +20,10 @@
 #ifdef PFA_GEN_STATS
 #include <iostream>
 #endif
-#include <cv.h>
-#include <highgui.h>
 #include <opencv2/objdetect/objdetect.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/imgproc/types_c.h>
+#include <opencv2/imgproc/imgproc_c.h>
 #include "eyesDetector.h"
 #include "pam_face_defines.h"
 

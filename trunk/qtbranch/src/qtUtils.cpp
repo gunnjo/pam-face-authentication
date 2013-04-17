@@ -17,9 +17,9 @@
 */
 
 #include <QtGui>
-#include <cxcore.h>
-#include "cv.h"
-#include "highgui.h"
+#include "opencv2/highgui/highgui.hpp"
+#include <opencv2/imgproc/types_c.h>
+#include <opencv2/imgproc/imgproc_c.h>
 #include "pam_face_defines.h"
 #include "qtUtils.h"
 

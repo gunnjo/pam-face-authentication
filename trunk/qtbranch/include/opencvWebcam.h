@@ -1,8 +1,6 @@
 #ifndef _INCL_GUARD_WEBCAM
 #define _INCL_GUARD_WEBCAM
 
-#include "cv.h"
-#include "highgui.h"
 #include "opencv2/highgui/highgui.hpp"
 
 /**

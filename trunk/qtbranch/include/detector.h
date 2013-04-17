@@ -2,8 +2,7 @@
 #define _INCL_GUARD_DETECTOR
 
 #include <string>
-#include "cv.h"
-#include "highgui.h"
+#include "opencv2/highgui/highgui.hpp"
 #include "tracker.h"
 #include "pam_face_defines.h"
 #include "faceDetector.h"

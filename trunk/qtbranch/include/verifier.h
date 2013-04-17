@@ -2,8 +2,7 @@
 #define _INCL_GUARD_VER
 
 #include <string>
-#include "cv.h"
-#include "highgui.h"
+#include "opencv2/highgui/highgui.hpp"
 
 /**
 * Structure of Face Images.

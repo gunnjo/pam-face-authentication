@@ -2,8 +2,7 @@
 #define _INCL_QTUTILS
 
 #include <QtGui>
-#include "cv.h"
-#include "highgui.h"
+#include "opencv2/highgui/highgui.hpp"
 
 /**
 * Convert IplImage to QImage

@@ -18,9 +18,12 @@
 
 // #include <cstdio>
 #include <string>
+#include <iostream>
 #include "faceDetector.h"
 #include "tracker.h"
-#include "cv.h"
+#include "opencv2/highgui/highgui.hpp"
+#include <opencv2/imgproc/types_c.h>
+#include <opencv2/imgproc/imgproc_c.h>
 
 using std::string;
 
