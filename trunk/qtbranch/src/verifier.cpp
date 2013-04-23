@@ -46,8 +46,7 @@ using std::list;
 //------------------------------------------------------------------------------
 verifier::verifier()
 {
-    uid_t userID = getuid();
-    verifier(userID);
+    verifier(getuid());
 	
 }
 
