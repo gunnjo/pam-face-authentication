@@ -466,6 +466,7 @@ void verifier::removeFaceSet(char* setName)
     snprintf(dirname, 300, "%s/%s", facesDirectory.c_str(), setName);
 
     DIR* d=opendir(dirname);
+    if ( d == NULL) return;
     while (de = readdir(d))
     {
         if (strcmp(de->d_name + strlen(de->d_name)-3, "jpg") == 0)
@@ -771,8 +772,15 @@ setFace* verifier::getFaceSet()
     list<string>* mylist = new list<string>;
     list<string>::iterator it;
 
+    // TODO: Make this a little more OO
+    setFace* setFaceStruct = new setFace;
+    setFaceStruct->setName = NULL;
+    setFaceStruct->setFilePathThumbnails = NULL;
+    setFaceStruct->faceImages = NULL;
+    setFaceStruct->count = 0;
     //Build a list of the faces from the files in the faces dir
     d = opendir(facesDirectory.c_str());
+    if ( d == NULL) return setFaceStruct;
     while (de = readdir(d))
     {
         if (!((strcmp(de->d_name, ".") == 0) || (strcmp(de->d_name, "..") == 0)))
@@ -785,7 +793,6 @@ setFace* verifier::getFaceSet()
 
     mylist->sort();
 
-    setFace* setFaceStruct = new setFace;
     setFaceStruct->setName = new char* [(int) mylist->size()];
     setFaceStruct->setFilePathThumbnails = new char* [(int) mylist->size()];
     setFaceStruct->faceImages = new structFaceImages[(int) mylist->size()];
@@ -821,18 +828,20 @@ setFace* verifier::getFaceSet()
 
         //A list of the images
         d = opendir(imagesDir);
-        while (de = readdir(d))
-        {
-            if (!((strcmp(de->d_name, ".") == 0) || (strcmp(de->d_name, "..") == 0)))
+        if ( d != NULL) {
+            while (de = readdir(d))
             {
-                imageK++;
-                char *fullPath = new char [300];
-                snprintf(fullPath, 300, "%s/%s", imagesDir, de->d_name);
-                mylistImages.push_back(fullPath);
-                delete [] fullPath;
+                if (!((strcmp(de->d_name, ".") == 0) || (strcmp(de->d_name, "..") == 0)))
+                {
+                    imageK++;
+                    char *fullPath = new char [300];
+                    snprintf(fullPath, 300, "%s/%s", imagesDir, de->d_name);
+                    mylistImages.push_back(fullPath);
+                    delete [] fullPath;
+                }
             }
+            closedir(d);
         }
-        closedir(d);
 
         mylistImages.sort();
         setFaceStruct->faceImages[k].faces = new IplImage* [imageK];
