@@ -35,7 +35,6 @@
 #include "aboutBox.h"
 #include "webcamImagePaint.h"
 #include "utils.h"
-#include "cv.h"
 #include "highgui.h"
 #include "qtUtils.h"
 #include "pam_face_defines.h"
